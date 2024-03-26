@@ -1,12 +1,10 @@
-# Just open the Mysql command prompt and login to administrator user and copy paste the following codes for creating dummy database:
-<br>
-<pre>
+### Just open the Mysql command prompt and login to administrator user and copy paste the following codes for creating dummy database:
 
+```SQL
 CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';
 
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;<br><br>
-USE Ticket Reservation System;<br><br>
-<pre>
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+USE Ticket Reservation System;
 
 CREATE TABLE Show_Details (
     Show_ID INT AUTO_INCREMENT PRIMARY KEY,
@@ -217,5 +215,4 @@ INSERT INTO tickets (Ticket_id, show, Customer_Name, Seat_number, Customer_id) V
 (108, 'Play H', 'Sophia Martinez', 'H8', 8),
 (109, 'Concert I', 'William Anderson', 'I9', 9),
 (110, 'Movie J', 'Isabella Thomas', 'J10', 10);
-
-</pre>
+```
