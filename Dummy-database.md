@@ -1,5 +1,43 @@
 # Just open the Mysql command prompt and login to administrator user and copy paste the following codes for creating dummy database:
 <br>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Code Highlighting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+</head>
+<body>
+    <!-- Your SQL code here -->
+    <pre><code class="language-sql">
+ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;  
+CREATE USER RESERVATION IDENTIFIED BY MANAGER;
+GRANT DBA TO RESERVATION;
+COMMIT;
+CONNECT Ticket Reservation System;
+USE Ticket Reservation System;
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE,
+    phone VARCHAR(20) UNIQUE
+);
+    
+INSERT INTO customers (name, email, phone) VALUES
+('John Doe', 'john@example.com', '1234567890'),
+('Alice Smith', 'alice@example.com', '9876543210'),
+...
+('Oliver Davis', 'oliver@example.com', 'CB80');
+    </code></pre>
+    
+    <!-- Prism.js script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+</body>
+</html>
+
 ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;  
 <br>
 CREATE USER RESERVATION IDENTIFIED BY MANAGER;
