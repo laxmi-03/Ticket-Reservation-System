@@ -1,7 +1,7 @@
 # Ticket-Reservation-System
-Python Projects
+<b>Python Projects</b>
 <br><br>
-<p>About<p></p>
+<p><b>About</b><p></p>
 This project is about Ticket Reservation System which is used to view show details, search shows/customers, Seat availability, show timings. We can also enquire about price of different shows. We can book seats online. This provides a easy to use Ticket Reservation System.
 <br><br>
 
@@ -27,3 +27,4 @@ This project is about Ticket Reservation System which is used to view show detai
 <p><b>Technologies used:-</b><p></p>
   * Python<br>
   * MySql
+
