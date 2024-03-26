@@ -16,6 +16,7 @@ CREATE TABLE Show_Details (
     Show_Duration INT
 ) AUTO_INCREMENT = 1001;
 
+
 CREATE TABLE Movie (
     show_id INT PRIMARY KEY AUTO_INCREMENT PRIMARY KEY,
     show_time TIME,
@@ -24,6 +25,7 @@ CREATE TABLE Movie (
     FOREIGN KEY (show_id) REFERENCES show_details(show_id)
 ) AUTO_INCREMENT = 1001;
 
+    
 CREATE TABLE play (
     show_id INT,
     show_time TIME,
@@ -41,6 +43,7 @@ CREATE TABLE theatre_details (
     Booked_seats INT
 );
 
+    
 CREATE TRIGGER before_update
 BEFORE UPDATE ON theatre_details
 FOR EACH ROW
@@ -54,6 +57,7 @@ CREATE TABLE customers (
     phone VARCHAR(20) UNIQUE
 );
 
+    
 CREATE TABLE regular_customer (
     Customer_Id INT PRIMARY KEY,
     Loyalty_point INT,
@@ -62,6 +66,7 @@ CREATE TABLE regular_customer (
     ON DELETE CASCADE
 );
 
+    
 CREATE TABLE premium_customer (
     Customer_Id INT PRIMARY KEY,
     Membership_Level VARCHAR(50),
@@ -82,6 +87,7 @@ CREATE TABLE tickets (
 ) AUTO_INCREMENT = 101;
   
 
+    
 INSERT INTO show_details (Show_ID, Show_Type, Show_Date, Show_Time, Show_Duration)
 VALUES
     (1021, 'Movie', '2024-03-15', '18:00:00', 120),
@@ -116,6 +122,7 @@ VALUES
     (1010, '15:15:00', 95, 'Mystery');
 
 
+    
 INSERT INTO play (show_id, show_time, duration, playwright)
 VALUES
     (1011, '18:00:00', 120, 'William Shakespeare'),
@@ -128,6 +135,7 @@ VALUES
     (1018, '17:45:00', 110, 'Harold Pinter'),
     (1019, '20:00:00', 140, 'Anton Chekhov'),
     (1020, '15:15:00', 95, 'Henrik Ibsen');
+
 
     
 INSERT INTO theatre_details (Name, Location, Capacity, Available_seats, Booked_seats)
@@ -143,6 +151,7 @@ VALUES
     ('Theater India 9', 'Surat', 350, 320, 30),
     ('Concert Venue India 10', 'Jaipur', 450, 420, 30);
 
+    
 
 INSERT INTO customers (name, email, phone)
 VALUES
@@ -165,10 +174,10 @@ VALUES
     ('Molly Brooks', 'molly@example.com', '8567890123'),
     ('Eliana Gray', 'eliana@example.com', '7898123456'),
     ('Adrian Simmons', 'adrian@example.com', '8123456770'),
-    ('Bella Turner', 'bella@example.com', '9345678911'),
-;
+    ('Bella Turner', 'bella@example.com', '9345678911');
   
 
+    
 INSERT INTO regular_customer (Customer_Id, Loyalty_point) VALUES
 (1, 100),
 (2, 150),
@@ -180,6 +189,7 @@ INSERT INTO regular_customer (Customer_Id, Loyalty_point) VALUES
 (8, 180),
 (9, 220),
 (10, 80);
+
 
     
 INSERT INTO premium_customer (Customer_Id, Membership_Level) VALUES
@@ -193,6 +203,7 @@ INSERT INTO premium_customer (Customer_Id, Membership_Level) VALUES
 (18, 'Diamond'),
 (19, 'Silver'),
 (20, 'Gold');
+
     
 
 INSERT INTO tickets (Ticket_id, show, Customer_Name, Seat_number, Customer_id) VALUES
