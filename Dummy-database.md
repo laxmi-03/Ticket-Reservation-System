@@ -1,54 +1,11 @@
-# Ticket-Reservation-System
-<b>Python Project</b>
-
-### About:
-This project is about Ticket Reservation System which is used to view show details, search shows/customers, Seat availability, show timings. We can also enquire about price of different shows. We can book seats online. This provides a easy to use Ticket Reservation System.
-
-### Features
-<span style="color:blue">**This Project is built for following purpose:-**</span>
-1. View Show details:-
-  - All details
-  - Particular
-2. Movie details:-
-  - All details
-  - Particular
-3. Play details:-
-  - All details
-  - Particular
-4. Reserve seat
-5. Check seat availibility
-6. Show customer details
-7. Update customer details
-8. Search customer details through name, email,phone
-9. Add new customer details
-10. show regular customer details using customer id
-11. show premium customer details using customer id
-12. Generate ticket
-
-### Technologies used:-
-  - Python
-  - MySql
-
-### ========== Dummy Database Initialization ===========
-
-STEP 1: Open SQL Plus OR SQL Developer
-
-STEP 2: Login and connect to database using administrator username and password
-
-STEP 3 :Execute the below command first to create a new user:
+### Just open the Mysql command prompt and login to administrator user and copy paste the following codes for creating dummy database:
 
 ```SQL
-
 CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';
 
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+USE Ticket Reservation System;
 
-```
-NOTE: If the above command fails for alter session issues, try to remove first line and then execute it.
-
-STEP 4: Now execute the below sql query in same terminal
-
-```SQL
 CREATE TABLE Show_Details (
     Show_ID INT AUTO_INCREMENT PRIMARY KEY,
     Show_Type VARCHAR(50),
@@ -258,20 +215,4 @@ INSERT INTO tickets (Ticket_id, show, Customer_Name, Seat_number, Customer_id) V
 (108, 'Play H', 'Sophia Martinez', 'H8', 8),
 (109, 'Concert I', 'William Anderson', 'I9', 9),
 (110, 'Movie J', 'Isabella Thomas', 'J10', 10);
-Ticket-Reservation-System/Dummy-database.md at main · laxmi-03/Ticket-Reservation-System
 ```
-
-STEP 5: Now Execute the below query one by one to check if the tables are created successfully
-```SQL
-SELECT * FROM show_details;
-SELECT * FROM Movie;
-SELECT * FROM play;
-SELECT * FROM theatre_details;
-SELECT * FROM customers;
-SELECT * FROM regular_customer;
-SELECT * FROM premium_customer;
-SELECT * FROM tickets;
-
-```
-Note: If any of the above commands fails, please try to fix it first and then proceed to next step
-
