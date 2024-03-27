@@ -1,3 +1,4 @@
+```python
 import mysql.connector as myconn
 
 mydb=myconn.connect(host='localhost',
@@ -309,3 +310,4 @@ while True:
             break
         case _:
             print("Invalid input!")
+```
