@@ -266,7 +266,7 @@ STEP 5: Now Execute the below query one by one to check if the tables are create
 SELECT * FROM show_details;
 SELECT * FROM Movie;
 SELECT * FROM play;
-SELECT * FROM Theatre;
+SELECT * FROM theatre_details;
 SELECT * FROM customers;
 SELECT * FROM regular_customer;
 SELECT * FROM premium_customer;
